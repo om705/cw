@@ -25,7 +25,7 @@ bot = Client("bot",
 logger = logging.getLogger()
 
 @bot.on_message(filters.command(["start"]))
-async def start(bot, update):
+async def account_login(bot: Client, m: Message):
        await update.reply_text("Hi i am **Careerwill Downloader**.\n\n"
                               "**NOW:-** "
                                        
@@ -49,7 +49,7 @@ info= {
     "email":"",
 }
 
-@bot.on_message(filters.command(["login"])& ~filters.edited)
+@bot.on_message(filters.command(["login"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(
         "Send **ID & Password** in this manner otherwise bot will not respond.\n\nSend like this:-  **ID*Password**"
