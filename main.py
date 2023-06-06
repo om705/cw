@@ -16,7 +16,6 @@ import logging
 import os
 import re
 
-import requests
 bot = Client("bot",
              bot_token= "5509916510:AAFHwDD7kOSrTvvjwmCqDF6LU8ov2_hjR2E",
              api_id= 27495136,
@@ -26,7 +25,7 @@ logger = logging.getLogger()
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-       await update.reply_text("Hi i am **Careerwill Downloader**.\n\n"
+       editable = await update.reply_text("Hi i am **Careerwill Downloader**.\n\n"
                               "**NOW:-** "
                                        
                                        "Press **/login** to continue..\n\n"
